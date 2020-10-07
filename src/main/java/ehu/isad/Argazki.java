@@ -18,13 +18,12 @@ public class Argazki {
         this.irudia=irudia;
 
     }
-    public ImageView lortuIrudia(String location) throws IOException {
-        InputStream is = getClass().getResourceAsStream("/" + location);
-        BufferedImage reader = ImageIO.read(is);
-        Image image = SwingFXUtils.toFXImage(reader,null);
-        ImageView imageView = new ImageView(image);
-        return imageView;
+
+    @Override
+    public String toString() {
+        return izena;
     }
+
     public String getFitx(){
         return irudia;
     }
